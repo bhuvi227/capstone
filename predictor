@@ -1,0 +1,11 @@
+from django.db import models
+
+class GroundwaterData(models.Model):
+    location = models.CharField(max_length=100)
+    rainfall = models.FloatField()
+    soil_type = models.CharField(max_length=100)
+    groundwater_level = models.FloatField()
+    date_collected = models.DateField()
+
+    def __str__(self):
+        return self.location
